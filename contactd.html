@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Destina-Infotech</title>
+  <link rel="icon" type="image/x-icon" href="destina.jpg">
+<style>
+button{
+  position: fixed;
+  top: 2%;
+  right: 1%;
+  font-size: 100%;
+}
+body{
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+}
+h2{
+  font-size: 250%;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+h2 span.outline-white {
+  color: #fff;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff
+}
+h2 span.outline-colored {
+  color: #e51743;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #e51743
+}
+p{
+  font-size: 150%;
+  line-height: 1.5;
+  color: bisque;
+}
+.left-section, .right-section {
+  height: 100vh;
+  width: 35% 65%;
+  padding: 2px;
+}
+.left-section{
+  width: 35%;
+  height: 100vh;
+}
+.right-section {
+  background-image: url(dback.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: start;
+  padding-top: 2%;
+  padding-left: 1%;
+  width: 65%;
+  padding-bottom: 5%;
+}
+.map {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+</style>
+</head>
+<body>
+  <button onclick="closeWindow()">X</button><br>
+  <div class="left-section">
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.2818655083524!2d74.50084981436343!3d15.841776249702184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf67326d88d6b3%3A0xb691776d86389161!2sDestina%20Infotech!5e0!3m2!1sen!2sin!4v1623165651296!5m2!1sen!2sin"
+        width="100%"
+        height="100%"
+        class="border-0"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+      <!-- <div id="google-map">
+        <div id="google-container"></div>
+        <div id="zoom-in">
+          <span class="btn-icon fas fa-plus"></span>
+        </div>
+        <div id="zoom-out">
+          <span class="btn-icon fas fa-minus"></span>
+        </div>
+      </div> -->
+    </div>
+  
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: location,
+          zoom: 12 
+        });
+      }
+    </script>
+  </div>
+
+  <div class="right-section">
+    <h2>
+      HELLO, <span class="outline-white">WELCOME</span> TO 
+      <span class="outline-colored">DESTINA INFOTECH</span>
+    </h2>
+    <p> WE WOULD LOVE TO HEAR FROM YOU</p>
+    <img src="destina.jpg" alt="login logo" style="width:120px;height:100px;padding-left: 3%;"><br>
+    <p class="section-text">
+      Whether you have a question about features, trials, pricing,
+      need a demo, or anything else, our team is ready to answer all
+      your questions from 9:00 to 18:00 every weekday.
+      <p><i class="fa fa-map-marker"></i>: 1st Floor, Arjun Empire, Congress Rd, <br> Tilakwadi, Belgaum, Karnataka 590006</p>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <p><i class="fa fa-phone"></i>:  +91 8792272777</p>
+      <p><i class="fa fa-envelope"></i>:  destinainfotech@gmail.com</p>
+      </p>
+
+
+    <script>
+      <!--closebutton-->
+      function closeWindow() {
+        window.history.back();
+      }
+      
+      function goBack() {
+      window.history.back();
+      } 
+
+      function showInfo(id) {
+    var infoDiv = document.getElementById(id);
+    if (infoDiv.style.display === 'block') {
+      infoDiv.style.display = 'none';
+    } else {
+      infoDiv.style.display = 'block';
+    }
+  }
+  </script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Destina Infotech</title>
+        <link rel="icon" type="image/x-icon" href="destina.jpg">
+        <style>
+            body{
+                display: flex;
+                justify-content: space-between;
+                height: 100vh;
+                margin: 0;
+            }
+            p{
+                text-align: start;
+                font-size: 100%;
+                color: bisque;
+            }
+            h2{
+                padding-top: 20%;
+                text-align: start;
+                color:white;
+                font-size: 200%;
+            }
+            h2 span.outline-white {
+                color: #fff;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: #fff
+            }
+            h2 span.outline-colored {
+                color: #e51743;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: #e51743
+            }
+            h3{
+                text-align: start;
+                color:white;
+                font-size: 200%;
+            }
+            h3 span.outline-white {
+                color: #fff;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: #fff
+            }
+            nav {
+                position: fixed;
+                left: 2%;
+                bottom: 5%;
+            }
+            nav a {
+                color: indianred;
+                text-decoration: none;
+                font-size: 20px;
+                font-weight: 500;
+                margin-right: 10px;
+            }
+            button{
+                position: fixed;
+                left: 1%;
+            }
+            .slideshow-container {
+                position: relative;
+            }
+            .slideshow-container img {
+                width: 100%;
+                height: 100vh;
+            }
+            .numbertext {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                color: white;
+                font-size: 25px;
+            }
+            .text {
+               position: absolute;
+                bottom: 10px;
+                left: 10px;
+                background-color: black;
+                color: white;
+                font-size: 25px;
+                text-align: center;
+            }
+            .fade{
+                animation-name: fade;
+                animation-duration: 2s;
+            }
+           
+
+<!--ASK US-->
+    body {font-family: Arial, Helvetica, sans-serif; height: 100vh;}
+    .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%; /* Adjust the maximum width of the modal */
+    background: none; /* Remove the background color */
+    text-align: center; /* Align the content within the modal to the center */
+}
+
+.modal-content {
+    background-image: url(dback.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: start;
+    margin: auto;
+    padding: 20px;
+    border: 3px solid whitesmoke;
+    width: 80%;
+    height: 80%; /* Set the height of the modal content to 100% */
+    position: relative;
+}
+.modal-content input[type="text"],
+.modal-content input[type="email"],
+.modal-content textarea {
+    font-size: 20px; /* Adjust the font size */
+    padding: 10px; /* Increase padding for a larger input appearance */
+    width: 100%; /* Set the width to fill the available space */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    margin-bottom: 10px; /* Add margin between elements */
+    font-family: Arial, Helvetica, sans-serif;
+}
+    button[type="submit"] {
+    background-color: #e51743;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative; 
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+}
+    .close {
+        color: whitesmoke;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .left-section, .right-section {
+        height: 100vh;
+        width: 50% 50%;
+        padding: 2px;
+    }
+    .right-section{
+        width: 50%;
+        background-size: cover;
+    }
+    .left-section {
+        background-image: url(dback.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: start;
+        padding-top: 2%;
+        width: 50%;
+        padding-bottom: 5%;
+    }
+            
+    </style>
+    </head>
+
+    <body>
+        <div class="left-section">
+        <button onclick="goToNewPage()" style="font-size: 200%; color: #fff; background: transparent;">=</button>
+
+        <script>
+          function goToNewPage() {
+            location.href = "menubar.html";
+          }
+        </script>
+
+        <h2>HELLO....WELCOME TO 
+            <span class="outline-colored">DESTINA INFOTECH</span> 
+            <span class="outline-white">BELAGAVI</span>....
+            WE ARE PROVIDING CREATIVE CUSTOM <span style="color: #e51743;"> SOFTWARE AND WEB APPLICATION </span>
+            FOR YOUR BUSINESS</h2><br>
+
+<!--ASK US-->  
+<button id="myBtn" style="font-size: 120%; color: #fff; background: transparent; font-weight: bold;">ASK US</button><br><br>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span> 
+    <h3>WANT TO KNOW MORE ABOUT US, TELL US ABOUT <span class="outline-white">YOUR PROJECT</span></h3>
+    <p>DROP US A LINE AND WE WILL GET BACK AS SOON AS POSSIBLE....</p>
+
+    
+    <form style="text-align: start; color: antiquewhite;">
+        <input type="text" id="name" name="name" placeholder="Enter Your Name*"><br> <br>
+        <input type="email" id="email" name="email" placeholder="Enter your Email*"><br><br>
+        <textarea type="textarea" id="textarea" name="textarea" placeholder="A few words*"></textarea>
+        <button type="submit">Send</button>
+    </form>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+<!--ASk Us END-->
+
+        <header>
+            <nav>
+                <a href="https://www.instagram.com/destinainfotech/">  Instagram /  </a>
+                <a href="https://www.facebook.com/people/Destina-Infotech/100069839400736/">  Facebook / </a>
+                <a href="https://twitter.com/DestinaInfotech">  Twitter </a>
+              </nav>
+        </header>
+        <br>
+    </div>
+
+    <div class="right-section">
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 4</div>
+              <img src="1.jpg" style="width:100%">
+              <div class="text">IT consulting <br>Create Brand Presentation</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 4</div>
+              <img src="2.jpg" style="width:100%">
+              <div class="text">Mobile App Design <br> creative Design UI/UX</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 4</div>
+              <img src="3.jpg" style="width:100%">
+              <div class="text">Trusted Support <br> Flexible Support</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="4.jpg" style="width:100%">
+                <div class="text">Team work <br> Affordable pricing</div>
+            </div>
+            
+            </div>
+
+            <div style="text-align:center">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+              </div>
+
+        <script>
+              var slideIndex = 0;
+              showSlides();
+  
+            function showSlides() {
+                var slides = document.getElementsByClassName("mySlides");
+                for (var i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1;
+                }
+                slides[slideIndex - 1].style.display = "block";
+                setTimeout(showSlides, 2000); // Change slide every 2 seconds (modify this value as per your requirement)
+                }
+        </script>
+    </div>
+
+    </body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Destina-Infotech</title>
+  <link rel="icon" type="image/x-icon" href="destina.jpg">
+  <style>
+ button{
+  position: fixed;
+  top: 2%;
+  right: 1%;
+  font-size: 100%;
+}
+ html {
+  height: 100vh;
+  margin: 0;
+}
+body{
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  margin: 0;
+}
+h2{
+  font-size: 200%;
+  color: white;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+h3{
+  font-size: 150%;
+  font-weight: bold;
+  color: white;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+h2 span.outline-white {
+  color: #fff;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff
+}
+p{
+  font-size: 150%;
+  line-height: 1.5;
+  color: bisque;
+  padding: 1px;
+}
+.left-section, .right-section {
+  height: 100vh;
+  width: 50% 50%;
+  padding: 2px;
+}
+.left-section{
+  width: 50%;
+  background-size: cover;
+}
+.right-section {
+  background-image: url(dback.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: start;
+  padding-top: 2%;
+  width: 50%;
+  padding-bottom: 5%;
+  padding-left: 1%;
+}
+p span.outline-colored {
+  text-align:start;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #e51743;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #e51743
+}
+.image-container {
+  display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.image-item {
+    display: flex;
+    align-items: center;
+}
+img {
+  height: 55px;
+  width: 55px;
+}
+.image-name {
+  font-weight: bold;
+    font-size: 100%;
+    margin-left: 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+}
+
+.box {
+  position: relative;
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    opacity: 0;
+    color: white;
+    transition: opacity 0.3s;
+  }
+
+  .overlay h2 {
+    font-size: 18px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    top: 3px;
+    background-color: black;
+  }
+
+  .overlay p {
+    font-size: 15px;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    background-color:black;
+  }
+
+  .box:hover .overlay {
+    opacity: 1;
+  }
+  </style>
+</head>
+<body>
+  <button onclick="closeWindow()">X</button><br>
+  <div class="left-section">
+  <div class="container">
+    <div class="box">
+      <img src="portfolio-1.jpg" alt="Image 1">
+      <div class="overlay">
+        <h2>Desktop Application</h2>
+        <p>user-friendly, and effective Desktop Applications
+          that<br> work offline and run off the web browser.</p>
+      </div>
+    </div>
+    <div class="box">
+      <img src="portfolio-2.jpg" alt="Image 2">
+      <div class="overlay">
+        <h2>Mobile Application</h2>
+        <p>We are a mobile app development agency with an<br>
+          obsession to lay the roadmap to success for your
+          business.</p>
+      </div>
+    </div>
+    <div class="box">
+      <img src="portfolio-3.jpg" alt="Image 3">
+      <div class="overlay">
+        <h2>Web Design</h2>
+        <p>We build websites that engage your users and
+          generate <br>real results for your business.</p>
+      </div>
+    </div>
+    <div class="box">
+      <img src="portfolio-4.jpg" alt="Image 4">
+      <div class="overlay">
+        <h2>Digital Marketing</h2>
+        <p>We have ample aspects like SEO, SEM, Internet<br>
+          marketing campaign, Email marketing, PPC and some<br>
+          more, that can help you reach your goals.</p>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="right-section">
+    <p><span class="outline-colored">OUR SERVICES</span></p>
+    <h2>HAPPY TO PROVIDING THESE <span class="outline-white">SERVICES</span> TO YOU.</h2>
+    <h3>Our core custom software development services.</h3>
+    
+    <p class="section-text">
+      From IT strategy consulting and comprehensive technology
+      roadmaps to the end-to-end development of scalable solutions,
+      Destina delivers a full-cycle software development services
+      that adapt seamlessly to your project requirements and
+      business needs.
+    </p>
+
+    <div class="image-container">
+      <div class="image-item">
+          <img src="icon-1.png" alt="High Quality Code" title="High Quality Code" />
+          <h3 class="image-name">HIGH QUALITY<br />CODE DESIGN</h3>
+      </div>
+      <div class="image-item">
+          <img src="icon-2.png" alt="Cost Efficiency" title="Cost Efficiency" />
+          <h3 class="image-name">COST <br />EFFICIENT</h3>
+      </div>
+      <div class="image-item">
+          <img src="icon-3.png" alt="Flexible" title="Flexible" />
+          <h3 class="image-name">PROVIDE FLEXIBLE<br />DESIGN</h3>
+      </div>
+      <div class="image-item">
+          <img src="icon-4.png" alt="Support" title="Loyal Support" />
+          <h3 class="image-name">TRUSTED<br />SUPPORT</h3>
+      </div>
+  </div>
+
+    <script>
+      <!--closebutton-->
+      function closeWindow() {
+        window.history.back();
+      }
+      
+      function goBack() {
+      window.history.back();
+      } 
+
+      function showInfo(id) {
+    var infoDiv = document.getElementById(id);
+    if (infoDiv.style.display === 'block') {
+      infoDiv.style.display = 'none';
+    } else {
+      infoDiv.style.display = 'block';
+    }
+  }
+  </script>
+  </div>
+    
+</body>
+</html>

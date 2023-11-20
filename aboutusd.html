@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Destina-Infotech</title>
+  <link rel="icon" type="image/x-icon" href="destina.jpg">
+<style>
+button{
+  position: fixed;
+  top: 2%;
+  right: 1%;
+  font-size: 100%;
+}
+body{
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+h2{
+  font-size: 200%;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+h2 span.outline-white {
+  color: #fff;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff
+}
+p{
+  font-size: 150%;
+  line-height: 1.5;
+  color: bisque;
+}
+.left-section, .right-section {
+  height: 100vh;
+  width: 40% 60%;
+  padding: 20px;
+}
+.left-section{
+  width: 40%;
+  height: 100vh;
+  background-image: url(aboutusd.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.right-section {
+  background-image: url(dback.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: start;
+  padding-top: 2%;
+  padding-left: 1%;
+  width: 60%;
+  padding-bottom: 5%;
+}
+p span.outline-colored {
+  text-align: start;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #e51743;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #e51743
+}
+.skill {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.skill-bar {
+  width: 100%;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 10px;
+  background-color:red;
+  color: white;
+  line-height: 10px;
+}
+
+.skill-percent {
+  position: absolute;
+  top: -25px;
+  right: 0;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.skill-name {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 20px;
+  text-align:start;
+  width: 100%;
+}
+</style>
+</head>
+<body>
+  <button onclick="closeWindow()">X</button><br>
+  <div class="left-section">
+ <p style="text-align: center; padding-top: 620px; color:#e51743; font-family: fantasy;"> 
+  Teamwork makes the Dream Work</p>
+  </div>
+
+  <div class="right-section">
+    <p><span class="outline-colored">ABOUT US</span></p>
+    <h2>
+      I just want to Share you <span class="outline-white">AWESOME</span> Story of the Destina Infotech.</h2>
+      <p> WHAT MAKES US WHO WE ARE TODAY. </p>
+    <p class="section-text">
+      At Destina Infotech, we develop innovative and creative
+      services that provide total communication and information
+      solutions. Among a plethora of services, web design and
+      development, ERPs, CRMs, e-commerce solutions,
+      business-to-business applications, business-to-client
+      applications, managed hosting and internet portal management
+      are few that we offer. Satisfied clients around the globe bear
+      testimony to the quality of our work.
+    </p><br>
+
+    <div class="skill">
+      <div class="skill-bar">
+        <div class="skill-progress" style="width: 96%;"></div>
+      </div>
+      <div class="skill-percent">96%</div>
+      <div class="skill-name">Development</div>
+    </div>
+    <br><br>
+    
+    <div class="skill">
+      <div class="skill-bar">
+        <div class="skill-progress" style="width: 90%;"></div>
+      </div>
+      <div class="skill-percent">90%</div>
+      <div class="skill-name">Design</div>
+    </div>
+    <br><br>
+
+    <div class="skill">
+      <div class="skill-bar">
+        <div class="skill-progress" style="width: 80%;"></div>
+      </div>
+      <div class="skill-percent">80%</div>
+      <div class="skill-name">Marketing</div>
+    </div>
+    <br>
+
+    <script>
+      <!--closebutton-->
+      function closeWindow() {
+        window.history.back();
+      }
+      
+      function goBack() {
+      window.history.back();
+      } 
+
+      function showInfo(id) {
+    var infoDiv = document.getElementById(id);
+    if (infoDiv.style.display === 'block') {
+      infoDiv.style.display = 'none';
+    } else {
+      infoDiv.style.display = 'block';
+    }
+  }
+
+  const skillProgress = document.getElementsByClassName("skill-progress");
+  for (let i = 0; i < skillProgress.length; i++) {
+    const progressElement = skillProgress[i];
+    const width = progressElement.style.width;
+    progressElement.style.width = `${width}%`;
+  }
+  </script>
+  </div>
+</body>
+</html>

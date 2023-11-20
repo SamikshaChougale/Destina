@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loading Page</title>
+  <link rel="icon" type="image/x-icon" href="destina.jpg">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    body{
+      background-image: url('dback.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    p {
+      text-align: center;
+      font-size: 60px;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+      opacity: 0;  
+      animation: slide-in 2s ease forwards; 
+      animation-delay: 0.5s;
+    }
+
+    p span.outline-white {
+      color: #fff;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #fff
+    }
+    p span.outline-colored {
+      color: #e51743;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #e51743
+    }
+
+    .loading-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0);
+    }
+
+    .loading-spinner {
+      border: 16px solid #f3f3f3;
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      animation: spin 3s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes slide-in {
+      0% { opacity: 0; transform: translateY(50px); }
+      100% { opacity: 1; transform: translateY(0px); }
+    }
+  </style>
+</head>
+<body>
+  <div id="loading-page">
+    <div id="loading-spinner"></div>
+    <p><span class="outline-white">DESTINA</span></p>
+    <p><span class="outline-white">INFOTECH</span></p>
+    <p style="color: red;"><span class="outline-colored">BELAGAVI</span></p>
+  </div>
+
+  <script>
+    window.addEventListener('load', function () {
+      const loadingPage = document.getElementById('loading-page');
+      loadingPage.style.opacity = 1;
+
+      setTimeout(function () {
+        loadingPage.style.opacity = 0;
+        setTimeout(function () {
+            window.open("destina.html", "_self"); 
+        }, 500);
+      }, 3000);  
+    });
+  </script>
+</body>
+</html>

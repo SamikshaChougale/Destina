@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Destina-Infotech</title>
+  <link rel="icon" type="image/x-icon" href="destina.jpg">
+<style>
+button{
+  position: fixed;
+  top: 2%;
+  right: 1%;
+  font-size: 100%;
+}
+body{
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+a{
+  font-size: 300%;
+  color: crimson;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+a:hover, a:active {
+  color: white;
+}
+.left-section, .right-section {
+  height: 100vh;
+  width: 30% 70%;
+  padding: 20px;
+}
+.left-section{
+  width: 30%;
+  background-image: url(skillback.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.right-section {
+  background-image: url(dback.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding-top: 15%;
+  width: 70%;
+  padding-bottom: 5%;
+}
+</style>
+</head>
+<body>
+  <button onclick="closeWindow()">X</button><br>
+  <div class="left-section">
+
+  </div>
+
+  <div class="right-section">
+  <a href="#" onclick="goBack()">Home</a><br><br>
+
+  <a href="#" onclick="goToPage('aboutusd.html')">About Us</a><br><br>
+  <a href="#" onclick="goToPage('ourserviced.html')">Our Services</a><br><br>
+  <a href="#" onclick="goToPage('contactd.html')">Contact Us</a><br><br>
+
+    <script>
+      <!--Link open button-->
+      function goToPage(url) {
+        location.href = url;
+      }
+
+      function closeWindow() {
+        window.history.back();
+      }
+      
+      function goBack() {
+      window.history.back();
+      } 
+
+      function showInfo(id) {
+    var infoDiv = document.getElementById(id);
+    if (infoDiv.style.display === 'block') {
+      infoDiv.style.display = 'none';
+    } else {
+      infoDiv.style.display = 'block';
+    }
+  }
+  </script>
+  </div>
+</body>
+</html>
